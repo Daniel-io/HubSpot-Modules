@@ -1,0 +1,83 @@
+.carros-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, .95);
+    z-index: 9999;
+    overflow: scroll;
+    display: none;
+  }
+  
+  .carros-popup__close {
+    color: #00458C;
+    font-size: 40px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+  }
+  
+  .carros-popup__container {
+    display:flex;
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+  }
+  
+  .carros-popup__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .carros-popup__item {
+    flex-basis: 25%;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
+  
+  .carros-popup__item:hover {
+    border: 2px solid #2C2A29 !important;
+  }
+  
+  .carros-popup__text {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  .carros-popup__anchor {
+    display: block;
+  }
+  
+  .carros-popup__back {
+    color: #2C2A29 !important;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex !important;
+    align-items: flex-start;
+    width: 170px;
+  }
+  
+  @media (max-width:768px) {
+  
+    .carros-popup__item {
+      flex: 1 0 50%;
+    }
+  
+  }
+  
+  
+  @media (max-width:600px) {
+  
+    .carros-popup__item {
+      flex: 1 0 100%;
+    }
+  
+  }
+  
+  

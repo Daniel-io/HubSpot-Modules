@@ -1,0 +1,23 @@
+<div class="carros-popup" data-id-carros="{{ module.hubdbtable_field }}">
+    <div class="carros-popup__close js-nav-close"><img src="https://renting.rentingcolombia.com/hubfs/close-icon.svg"></div>
+    <img src="{{ module.renting_logo.src }}" alt="{{ module.renting_logo.alt }}" {{ sizeAttrs }}>
+    <div class="carros-popup__container">
+      <p class="carros-popup__back js-carros-back"> 
+        <img src="https://renting.rentingcolombia.com/hubfs/back-arrow-icon.svg" style="width: 28px; margin-right: 16px;"> Volver</p>
+      <div class="carros-popup__wrapper">
+        {% for row in hubdb_table_rows(module.hubdbtable_field) %}
+        <div class="carros-popup__item">
+          <a class="carros-popup__anchor js-got-to-section" href="#{{row.section_id}}">
+            <img class="carros-popup__image" src="{{ row.car_image.url }}">
+            <div class="carros-popup__text">{{ row.name }}</div> 
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    
+  
