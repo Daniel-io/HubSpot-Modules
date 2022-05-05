@@ -1,0 +1,119 @@
+<div class="c-page-head">
+    <div class="u-bg-primary">
+      <div class="o-wrapper">
+        <div class="c-page-head__sup">
+          <div class="c-page-head__top-menu u-display-none u-display-block@sm 1">
+            {% simple_menu menu_tree="{{ module.top_menu }}" %}
+          </div>
+          <ul class="o-list-inline u-display-none u-display-block@sm social-list">
+            <li class="o-list-inline__item"><a class="c-page-head__icon-social" href="{{ module.social_media_link_1.url.href }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="o-list-inline__item"><a class="c-page-head__icon-social" href="{{ module.social_media_link_2.url.href }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li class="o-list-inline__item"><a class="c-page-head__icon-social" href="{{ module.social_media_link_3.url.href }}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li class="o-list-inline__item"><a class="c-page-head__icon-social" href="{{ module.copia_de_social_media_link_4.url.href }}" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="o-wrapper">
+      <div class="c-page-head__sub u-between" id="sticker">
+        <div class="c-page-head__icon u-display-none@sm js-toggleMenu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <a href="https://www.rentingcolombia.com/" title="Renting Colombia"><img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ sizeAttrs }}></a>
+        <div class="c-page-head__main-menu u-display-none u-display-block@sm">
+          {% menu id="{{ module.menu_field }}" %}
+        </div>
+    <!--     <a href="{{ module.transacciones_link.url.href  }}" class="c-page-head__btn" target="_blank"><span class="u-display-none  u-display-inline-block@sm"> Transacciones </span> <i class="fas fa-credit-card"></i></a> -->
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <!------- MOBILE NAVIGATION PANEL  ------->
+  
+  
+  
+  <div class="c-mobile-panel__backdrop js-mobilePanel">
+    <div class="c-mobile-panel o-box">
+  
+      <div class="c-mobile-panel__head  u-between u-mb--md">
+        <img class="nav-logo" src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ sizeAttrs }}>
+        <div class="c-page-head__icon js-closeMenu">
+          <img class="nav-close" src="https://cdn2.hubspot.net/hubfs/4524432/Close.svg" width="26" height="26" alt="cerrar" loading="lazy">
+         <!-- <i class="fas fa-times"></i>-->
+        </div>
+      </div>
+  
+      <div class="c-mobile-panel__body">
+        <ul class="o-list-inline social-icons">
+          <li class="o-list-inline__item"><a class="c-page-head__icon-social" href="{{ module.social_media_link_1.url.href }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="o-list-inline__item"><a class="c-page-head__icon-social" href="{{ module.social_media_link_2.url.href }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li class="o-list-inline__item"><a class="c-page-head__icon-social" href="{{  module.social_media_link_3.url.href }}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        <div class="c-mobile-panel__top-menu">
+          {% simple_menu menu_tree="{{ module.top_menu }}" %}
+        </div>
+      </div>
+  
+      <div class="c-mobile-panel__foot">
+        <div class="c-mobile-panel__main-menu">
+          {% menu id="{{ module.menu_field }}" %}
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!------- TRANSACTIONS POPUP  (CURRENTLY DISABLED) ------->
+  
+  
+  
+  
+  
+  <div class="c-transaction js-transaction">
+    <div class="c-transaction__popup">
+      <div class="c-transaction__icon js-closeTransaction">
+        <i class="fas fa-times"></i>
+      </div>
+      <p class="c-transaction__head"><span> Transacciones </span> <i class="fas fa-credit-card icon-card"></i></p>
+      <div>
+        {% form
+      form_to_use="{{ module.transaction_form.form_id }}"
+      response_response_type="{{ module.transaction_form.response_type }}"
+      response_message="{{ module.transaction_form.message }}"
+      response_redirect_id="{{ module.transaction_form.redirect_id }}"
+      response_redirect_url="{{module.transaction_form.redirect_url}}"
+      gotowebinar_webinar_key="{{ module.transaction_form.gotowebinar_webinar_key }}"
+  %}
+      </div>
+      <div>
+        <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ sizeAttrs }}>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
