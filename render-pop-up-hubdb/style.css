@@ -1,0 +1,78 @@
+.marca-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 9999;
+    overflow: scroll;
+    display: none;
+  }
+  
+  .marca-popup__close {
+    color: #00458C;
+    font-size: 40px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+  }
+  
+  .marca-popup__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+  }
+  
+  .marca-popup__item {
+    flex-basis: 25%;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
+  
+  .marca-popup__item:hover {
+    border: 2px solid #2C2A29;
+  }
+  
+  .marca-popup__text {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  
+  @media (max-width:768px) {
+    
+    .marca-popup__item {
+      flex: 1 0 33%;
+    }
+    
+    .marca-logo {
+      margin: 0 auto;
+      display: block;
+    }
+    
+  }
+  
+  @media (max-width:450px) {
+    
+    .marca-popup__item {
+      flex: 1 0 50%;
+    }
+    
+  }
+  
+  @media (max-width:375px) {
+    
+    .marca-popup__item {
+      flex: 1 0 100%;
+    }
+    
+  }
+  

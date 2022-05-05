@@ -1,0 +1,50 @@
+<div class="marca-popup js-marca-popup">
+    <div class="marca-popup__close js-nav-close"><img src="https://renting.rentingcolombia.com/hubfs/close-icon.svg"></div>
+    <img class="marca-logo" src="{{ module.renting_logo.src }}" alt="{{ module.renting_logo.alt }}" {{ sizeAttrs }}>
+    <div class="marca-popup__wrapper">
+      {% for item in module.marca_item %}
+        <div class="marca-popup__item js-marca-popup__item" data-id="{{ item.hubdbtable_field }}">
+          <img class="marca-popup__image" src="{{ item.marca.src }}" alt="{{ item.marca.alt }}" {{ sizeAttrs }}>
+          <div class="marca-popup__text">{% inline_text field="marca_text" value="{{ item.marca_text }}" %}</div> 
+        </div>
+      
+      {% endfor %}
+      {% set href = module.ver_catalogo.enlace.url.href %}
+      {% if module.ver_catalogo.enlace.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      {% set rel = [] %}
+      {% if module.ver_catalogo.enlace.no_follow %}
+      {% do rel.append("nofollow") %}
+      {% endif %}
+      {% if module.ver_catalogo.enlace.open_in_new_tab %}
+      {% do rel.append("noopener") %}
+      {% endif %}
+      {% if module.activar_ver_catalogo %}
+      <div class="marca-popup__item ">
+        <a  href="{{ href }}"
+  
+           {% if module.ver_catalogo.enlace.open_in_new_tab %}target="_blank"{% endif %}
+           {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+           >
+          <img class="marca-popup__image" src="{{ module.ver_catalogo.marca.src }}" alt="{{ module.ver_catalogo.marca.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          <div class="marca-popup__text"> {% inline_text field="ver_catalogo.marca_text" value="{{ module.ver_catalogo.marca_text }}" %}</div>
+  
+        </a>
+      </div>
+      {% endif %}
+      
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
